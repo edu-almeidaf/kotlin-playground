@@ -1,12 +1,9 @@
 fun calculateConsumerPrice(factoryCost: Double): Double {
-    if (factoryCost <= 12000.0) {
-        return factoryCost * 1.05
+    return when (factoryCost) {
+        in 0.0..12000.0 -> factoryCost * 1.05
+        in 12000.01..25000.0 -> factoryCost * 1.1 + factoryCost * 0.15
+        else -> factoryCost * 1.15 + factoryCost * 0.2
     }
-    if (factoryCost > 12000.0 && factoryCost <= 25000.0) {
-        return factoryCost * 1.1 + factoryCost * 0.15
-    }
-
-    return factoryCost * 1.15 + factoryCost * 0.2
 }
 
 fun main() {
