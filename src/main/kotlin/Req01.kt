@@ -1,6 +1,4 @@
-fun calculateDiscount(originalPrice: Double): Double {
-    return originalPrice - originalPrice * 0.1
-}
+fun calculateDiscount(originalPrice: Double): Double = originalPrice - originalPrice * 0.1
 
 fun main() {
     print("Digite o valor a ser convertido: ")
