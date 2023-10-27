@@ -1,11 +1,15 @@
-fun calculateSumEven(numbers: List<Int>): Int {
-    TODO("Use essa função para desenvolver sua lógica")
-}
+fun calculateSumEven(numbers: List<Int>): Int = numbers.filter { it % 2 == 0 }.reduce { acc, it -> acc + it }
 
-fun calculateSumOdd(numbers: List<Int>): Int {
-    TODO("Use essa função para desenvolver sua lógica")
-}
+fun calculateSumOdd(numbers: List<Int>): Int = numbers.filter { it % 2 != 0 }.reduce { acc, it -> acc + it }
 
 fun main() {
-    TODO("Use essa função para rodar o codigo principal")
+    val numbers = mutableListOf<Int>()
+
+    for(i in 1..10) {
+        print("Digite um número: ")
+        numbers.add(readln().toInt())
+    }
+
+    println("Soma dos números pares: ${calculateSumEven(numbers)}")
+    println("Soma dos números ímpares: ${calculateSumOdd(numbers)}")
 }
