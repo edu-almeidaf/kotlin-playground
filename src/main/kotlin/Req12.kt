@@ -1,5 +1,7 @@
 fun multiplyLists(list1: List<Int>, list2: List<Int>, result: MutableList<Int>) {
-    TODO("Use essa função para desenvolver sua lógica")
+    list1.forEachIndexed { i, it ->
+        result.add(it * list2[i])
+    }
 }
 
 fun main() {
